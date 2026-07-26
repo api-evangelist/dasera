@@ -1,8 +1,25 @@
 aid: dasera
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dasera.png
 name: Dasera
-description: 'Dasera is a company surfaced as a portfolio company of sierra-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: security. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: 'Dasera is a data security company in the data security posture management (DSPM) and data
+  governance space, founded by Ani Chaudhuri and backed by Sierra Ventures. Its platform was built to
+  continuously discover, classify, and monitor sensitive data across cloud and on-premises data stores
+  (databases, warehouses, data lakes) and to surface data security, privacy, and compliance risk across
+  the data lifecycle. As of this enrichment pass the standalone dasera.com origin is unreachable (a
+  Cloudflare 1001 origin error with a failed TLS handshake), so no live developer portal, API reference,
+  or OpenAPI surface could be harvested; this profile records the domain-security posture that could
+  still be probed via DNS/TLS and remains a stub awaiting a live API surface.'
 url: https://raw.githubusercontent.com/api-evangelist/dasera/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,16 +29,31 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Security
+- Data Security
+- Data Security Posture Management
+- Data Governance
+- Cloud Security
+- Compliance
+- Privacy
 apis: []
+x-status: 'standalone dasera.com origin unreachable (Cloudflare 1001 / TLS handshake failure) as of 2026-07-18;
+  no live API/docs surface — enrichment limited to domain-security DNS/TLS probe'
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/dasera-domain-security.yml
 - type: Website
   url: https://dasera.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
